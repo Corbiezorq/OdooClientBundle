@@ -1,5 +1,5 @@
 {
-    "name": "clicktrend/odoo-client",
+    "name": "clicktrend/odoo-client-bundle",
     "type": "symfony-bundle",
     "description": "A Symfony Client for Odoo",
     "keywords": ["odoo", "xml-rpc", "symfony", "symfony2", "akeneo", "connector"],
