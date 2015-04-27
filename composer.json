@@ -1,23 +1,26 @@
 {
-    "name": "jacobsteringa/odoo-client",
-    "type": "library",
-    "description": "A PHP Client for Odoo",
-    "keywords": [],
-    "homepage": "https://github.com/jacobsteringa/OdooClient",
+    "name": "clicktrend/odoo-client",
+    "type": "symfony-bundle",
+    "description": "A Symfony Client for Odoo",
+    "keywords": ["odoo", "xml-rpc", "symfony", "symfony2", "akeneo", "connector"],
+    "homepage": "https://github.com/clicktrend/OdooClientBundle",
     "license": "MIT",
     "authors": [
         {
             "name": "Jacob Steringa",
             "email": "jacobsteringa@gmail.com"
+        },
+        {
+            "name": "Kadir Yücel",
+            "email": "lordkadir@gmail.com"
         }
     ],
     "require": {
-        "zendframework/zend-xmlrpc": "2.3.*",
-        "zendframework/zendxml": "1.0.*"
+         "lstrojny/fxmlrpc": "@stable"
     },
     "autoload": {
-        "psr-0": { "Jsg\\": "" }
+      "psr-0": { "Clicktrend\\Bundle\\OdooClientBundle\\": "" }
     },
-    "target-dir": "Jsg/Odoo",
-    "minimum-stability": "dev"
+    "target-dir": "Clicktrend/Bundle/OdooClientBundle",
+    "minimum-stability" : "stable"
 }

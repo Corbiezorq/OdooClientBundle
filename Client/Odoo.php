@@ -7,19 +7,19 @@
  * file that was distributed with this source code.
  */
 
-namespace Jsg\Odoo;
+namespace Clicktrend\Bundle\OdooClientBundle\Client;
 
-use Zend\XmlRpc\Client as XmlRpcClient;
+use fXmlRpc\Client as XmlRpcClient;
 
 /**
  * Odoo is an PHP client for the xmlrpc api of Odoo, formerly known as OpenERP.
  * This client should be compatible with version 6 and up of Odoo/OpenERP.
  *
  * This client is inspired on the OpenERP api from simbigo and uses a more or
- * less similar API. Instead of an own XmlRpc class, it relies on the XmlRpc
- * and Xml libraries from ZF.
+ * less similar API. Instead of an own XmlRpc class, it relies on the fxmlRpc.
  *
  * @author  Jacob Steringa <jacobsteringa@gmail.com>
+ * @author  Kadir Yücel <lordkadir@gmail.com>
  */
 class Odoo
 {
@@ -330,10 +330,6 @@ class Odoo
 		$this->path = $path;
 
 		$this->client = new XmlRpcClient($this->host . '/' . $path);
-		// The introspection done by the Zend XmlRpc client is probably specific
-		// to Zend XmlRpc servers. To prevent polution of the Odoo logs with errors
-		// resulting from this introspection calls we disable it.
-		$this->client->setSkipSystemLookup(true);
 
 		return $this->client;
 	}
